@@ -25,4 +25,3 @@ case object None extends Option[Nothing]
 object Option {
   def apply[A](get: A): Option[A] = if(get == null) Some(get) else None
 }
-

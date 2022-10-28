@@ -10,7 +10,7 @@ object common {
     if (f.getName.endsWith("java") || f.getName.endsWith("kt")) {
       val size = lineList(f.getAbsolutePath)
         .filter(_.startsWith("import"))
-        .filter(_.contains("order.trade.service"))
+        .filter(_.contains("order"))
         .size
       if (size > 0) {
         set += f.getAbsolutePath

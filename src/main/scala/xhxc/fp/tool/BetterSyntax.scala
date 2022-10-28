@@ -3,7 +3,7 @@ package xhxc.fp.tool
 object BetterSyntax {
 
   def main(args: Array[String]): Unit = {
-    println("order_fund_operate_items".toCamel())
+    println("".toCamel())
   }
 
   implicit class StringSyntax(v: String) {

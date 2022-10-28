@@ -6,11 +6,11 @@ import scala.collection.mutable
 object DAO {
   import BetterSyntax._
   def main(args: Array[String]): Unit = {
-    val conditions = List("merchantId", "outBatchFundUnfreezeNo", "oldState")
-    val shardings = List("merchantId", "outBatchFundFreezeNo")
-    val updates = List("newState", "completeTime")
+    val conditions = List("=", "", "")
+    val shardings = List("", "")
+    val updates = List("", "")
 //    select(conditions, shardings)
-//    insert(classOf[CoreBatchFundUnfreeze].getDeclaredFields)
+//    insert(classOf[xxx].getDeclaredFields)
     nonNullUpdateSQL(updates, conditions, shardings)
   }
 

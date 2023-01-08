@@ -13,7 +13,6 @@ libraryDependencies += "org.typelevel" %% "cats-core" % "2.7.0"
 libraryDependencies += "com.chuusai" %% "shapeless" % "2.3.3"
 
 
-
 val circeVersion = "0.14.1"
 
 libraryDependencies ++= Seq(

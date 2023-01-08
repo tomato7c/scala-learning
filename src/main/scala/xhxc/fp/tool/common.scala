@@ -19,6 +19,7 @@ object common {
   }
 
   def main(args: Array[String]): Unit = {
+
   }
 
   // consume each file

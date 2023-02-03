@@ -1,4 +1,4 @@
-package xhxc.fp.tool
+package xhxc.tool
 
 import java.lang.reflect.Field
 import scala.collection.mutable

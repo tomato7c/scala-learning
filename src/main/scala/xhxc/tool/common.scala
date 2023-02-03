@@ -1,31 +1,43 @@
-package xhxc.fp.tool
+package xhxc.tool
 
 import java.io.File
 
 object common {
 
   val set = collection.mutable.Set[String]()
+  var total = 0
 
   val consumer: File => Unit = f => {
-    if (f.getName.endsWith("java") || f.getName.endsWith("kt")) {
+    val fname = f.getName
+    if (!fname.endsWith("Test.java") && (fname.endsWith(".java") || fname.endsWith(".kt"))) {
       val size = lineList(f.getAbsolutePath)
-        .filter(_.startsWith("import"))
-        .filter(_.contains("order"))
+        .map(_.trim)
+        .filter(!_.startsWith("import"))
+        .filter(!_.isBlank)
+        .filter(!_.startsWith("//"))
+        .filter(!_.startsWith("/**"))
+        .filter(!_.startsWith("*"))
+        .filter(!_.startsWith("*/"))
+        .filter(!_.startsWith("/*"))
         .size
       if (size > 0) {
-        set += f.getAbsolutePath
+        println(s"$fname: $size lines")
+        total += size
       }
     }
   }
 
   def main(args: Array[String]): Unit = {
-
+    scanFiles("", consumer)
+    println(s"total $total lines")
   }
 
   // consume each file
   def scanFiles(root: String, consumer: File => Unit): Unit = {
     val file = new File(root)
     if (file.isDirectory) {
+      if (file.getName.equals("target")) return
+
       for (it <- file.listFiles) {
         scanFiles(it.getAbsolutePath, consumer)
       }

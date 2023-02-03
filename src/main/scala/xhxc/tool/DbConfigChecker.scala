@@ -1,4 +1,4 @@
-package xhxc.fp.tool
+package xhxc.tool
 
 object DbConfigChecker {
   def main(args: Array[String]): Unit = {

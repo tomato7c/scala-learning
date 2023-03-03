@@ -6,12 +6,12 @@ import scala.collection.mutable
 object DAO {
   import BetterSyntax._
   def main(args: Array[String]): Unit = {
-    val conditions = List("=", "", "")
+    val conditions = List("", "", "")
     val shardings = List("", "")
     val updates = List("", "")
 //    select(conditions, shardings)
-//    insert(classOf[xxx].getDeclaredFields)
-    nonNullUpdateSQL(updates, conditions, shardings)
+//    insert(classOf[].getDeclaredFields)
+//    nonNullUpdateSQL(updates, conditions, shardings)
   }
 
   private val tab = " " * 4

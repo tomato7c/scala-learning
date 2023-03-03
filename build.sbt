@@ -11,6 +11,7 @@ libraryDependencies += "net.minidev" % "json-smart" % "2.3"
 libraryDependencies += "org.typelevel" %% "cats-effect" % "3.3.12"
 libraryDependencies += "org.typelevel" %% "cats-core" % "2.7.0"
 libraryDependencies += "com.chuusai" %% "shapeless" % "2.3.3"
+libraryDependencies += "org.jetbrains.kotlin" % "kotlin-reflect" % "1.8.20-Beta"
 
 
 val circeVersion = "0.14.1"
